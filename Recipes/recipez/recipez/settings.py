@@ -68,11 +68,11 @@ WSGI_APPLICATION = 'recipez.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Recipes',
+        'NAME': 'recipez',
         'USER': 'postgres',
-        'PASSWORD': 'Eyecu123!',
+        'PASSWORD': 'EyecuOne23!',
         'HOST': '127.0.0.1',
-        'PORT': '9080',
+        'PORT': '5432',
     }
 }
 
@@ -123,3 +123,5 @@ AUTH_USER_MODEL = 'user.User'
 # Media settings
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+AUTHENTICATION_BACKENDS = ['user.auth_backend.EmailBackend']
